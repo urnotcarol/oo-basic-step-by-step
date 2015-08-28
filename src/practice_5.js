@@ -3,7 +3,7 @@ function Person(name, age) {
   this.age = age;
 }
 
-Person.prototype.basic_introduce = function() {
+Person.prototype.introduce = function() {
   return "My name is " + this.name + "." + " I am " + this.age + " years old. ";
 }
 
@@ -15,6 +15,7 @@ function Student(name, age, klass) {
 Student.prototype = Object.create(Person.prototype);
 Student.prototype.constructor = Student;
 
+Student.prototype.basic_introduce = Student.prototype.introduce;
 Student.prototype.introduce = function(){
   return this.basic_introduce() + "I am a student. I am at class " + this.klass + ".";
 }
@@ -26,6 +27,8 @@ function Worker(name, age) {
 Worker.prototype = Object.create(Person.prototype);
 Worker.prototype.constructor = Worker;
 
+
+Worker.prototype.basic_introduce = Worker.prototype.introduce;
 Worker.prototype.introduce = function() {
   return this.basic_introduce() + "I am a worker. I have a job.";
 }
