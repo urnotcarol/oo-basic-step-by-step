@@ -12,7 +12,7 @@ var Worker = require('../../src/practice_5').Worker;
 describe("Student", function(){
     it("should introduce himself with name, age and class", function(){
         var theStudent = new Student("Jack", 20, 1);
-        expect(theStudent.name).to.queal("Jack");
+        expect(theStudent.name).to.equal("Jack");
         expect(theStudent.age).to.equal(20);
         expect(theStudent.klass).to.equal(1);
         expect(theStudent.introduce()).to.equal("My name is Jack. I am 20 years old. I am a student. I am at class 1.");
