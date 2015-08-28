@@ -7,13 +7,13 @@ var sinonChai = require("sinon-chai");
 var expect = chai.expect;
 chai.use(sinonChai);
 
-describe("Practice 1", function(){
+describe("Person", function(){
     var thePerson = new Person("Jack", 17);
-    it("Person Constructor", function() {
+    it("should have field name and age", function() {
         expect(thePerson.name).to.exist;
         expect(thePerson.age).to.exist;
     })
-    it("Person introduce", function() {
+    it("should have a method introduce", function() {
         var result = thePerson.introduce();
         expect(result).to.equal("My name is Jack. I am 17 years old.")
     })
